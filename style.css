@@ -187,6 +187,7 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  margin-top: 100px;
 }
 
 .section__text__p2 {
@@ -354,38 +355,65 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
-#projects {
-  position: relative;
+.projects-section {
+  padding: 20px;
+}
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.video {
+  background-color: #f9f9f9; /* Background color */
+  border: 3px solid #ccc; /* Border */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better visual */
+  text-align: center;
+  border-color: #d9b68c;
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+.video video {
+  display: block;
+  margin: 0 auto 10px; /* Center video and add bottom margin */
+}
+.video iframe {
+  width: 100%;
+}
+.video span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.github-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+.github-button:hover {
+  background-color: #555;
 }
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
-
 /* CONTACT */
 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top : 800px;
   height: 70vh;
 }
 
