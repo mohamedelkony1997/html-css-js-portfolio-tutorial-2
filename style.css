@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -48,7 +49,6 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -90,7 +90,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -101,7 +101,7 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -111,7 +111,6 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -134,30 +133,19 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 10rem;
+  margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
 }
 
 .section-container {
   display: flex;
+  gap: 4rem;
+  height: 80%;
 }
 
 /* PROFILE SECTION */
@@ -186,8 +174,7 @@ section {
 }
 
 .section__text__p1 {
-  text-align: center;
-
+  margin-top: 100px;
 }
 
 .section__text__p2 {
@@ -238,10 +225,6 @@ section {
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
   background: rgb(53, 53, 53);
   color: white;
 }
@@ -258,10 +241,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
 
 #about {
@@ -269,19 +248,15 @@ section {
 }
 
 .about-containers {
+  display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,
 .about-details-container {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-pic {
@@ -299,20 +274,8 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: rgb(163, 163, 163) 0.1rem solid;
   text-align: center;
-}
-
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
@@ -336,9 +299,7 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
 }
@@ -355,13 +316,16 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
+
 .projects-section {
   padding: 20px;
 }
+
 .projects-section h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+
 .videos {
   display: flex;
   flex-wrap: wrap;
@@ -369,27 +333,27 @@ article .icon {
 }
 
 .video {
-  background-color: #f9f9f9; /* Background color */
-  border: 3px solid #ccc; /* Border */
+  background-color: #f9f9f9;
+  border: 3px solid #ccc;
   padding: 10px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better visual */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-color: #d9b68c;
 }
 
-.video video {
-  display: block;
-  margin: 0 auto 10px; /* Center video and add bottom margin */
-}
+.video video,
 .video iframe {
-  width: 100%;
+  display: block;
+  margin: 0 auto 10px;
 }
+
 .video span {
   display: block;
   margin-top: 10px;
   font-weight: bold;
 }
+
 .github-button {
   display: inline-block;
   margin-top: 10px;
@@ -407,13 +371,14 @@ article .icon {
 .github-button:hover {
   background-color: #555;
 }
-/* CONTACT */
+
+/* CONTACT SECTION */
 
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
- 
+  margin-top: 800px;
   height: 70vh;
 }
 
@@ -421,9 +386,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: rgb(163, 163, 163) 0.1rem solid;
+  background-color: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
